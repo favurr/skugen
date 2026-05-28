@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lucide, CheckCircle, Zap, Box } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Box, CheckCircle, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,16 +19,16 @@ export default function Home() {
             SKU & EAN-13 Generator
           </h1>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Generate professional SKUs and EAN-13 barcodes for your products instantly.
-            No more manual coding - just enter your product details and get standardized identifiers.
+            Generate professional SKUs and EAN-13 barcodes for your products
+            instantly. No more manual coding - just enter your product details
+            and get standardized identifiers.
           </p>
           <Button
             asChild
-            href="/products"
             variant="default"
             className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
           >
-            Get Started →
+            <Link href="/products">Get Started →</Link>
           </Button>
         </div>
 
@@ -35,10 +42,13 @@ export default function Home() {
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
-              <CardTitle className="text-xl font-semibold">Human-Readable SKUs</CardTitle>
+              <CardTitle className="text-xl font-semibold">
+                Human-Readable SKUs
+              </CardTitle>
               <CardDescription className="text-gray-600 dark:text-gray-400">
-                Generate clean, abbreviated SKUs like DLT-BLK-16G-0001 from product names and attributes.
-                Automatically formatted with consistent abbreviations and sequence numbers.
+                Generate clean, abbreviated SKUs like DLT-BLK-16G-0001 from
+                product names and attributes. Automatically formatted with
+                consistent abbreviations and sequence numbers.
               </CardDescription>
             </CardContent>
           </Card>
@@ -51,10 +61,13 @@ export default function Home() {
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
-              <CardTitle className="text-xl font-semibold">Standard EAN-13 Codes</CardTitle>
+              <CardTitle className="text-xl font-semibold">
+                Standard EAN-13 Codes
+              </CardTitle>
               <CardDescription className="text-gray-600 dark:text-gray-400">
                 Get 13-digit numeric EAN codes with proper checksum validation.
-                Format: 615110[SEQUENCE][CHECKSUM] - stable forever even if product details change.
+                Format: 615110[SEQUENCE][CHECKSUM] - stable forever even if
+                product details change.
               </CardDescription>
             </CardContent>
           </Card>
@@ -67,10 +80,12 @@ export default function Home() {
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
-              <CardTitle className="text-xl font-semibold">Persistent Storage</CardTitle>
+              <CardTitle className="text-xl font-semibold">
+                Persistent Storage
+              </CardTitle>
               <CardDescription className="text-gray-600 dark:text-gray-400">
-                All products saved securely to your Supabase database.
-                SKUs and EANs are guaranteed unique and retrievable anytime.
+                All products saved securely to your Supabase database. SKUs and
+                EANs are guaranteed unique and retrievable anytime.
               </CardDescription>
             </CardContent>
           </Card>
@@ -83,7 +98,9 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Input:</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Input:
+              </h3>
               <div className="space-y-2 text-sm font-mono bg-white dark:bg-gray-700 rounded px-3 py-2">
                 <div>Name: Dell Latitude</div>
                 <div>Attribute 1: Black</div>
@@ -92,10 +109,16 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Output:</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Output:
+              </h3>
               <div className="space-y-2 text-sm font-mono bg-white dark:bg-gray-700 rounded px-3 py-2">
-                <div><span className="font-medium">SKU:</span> DLT-BLK-16G-0001</div>
-                <div><span className="font-medium">EAN-13:</span> 6151100000015</div>
+                <div>
+                  <span className="font-medium">SKU:</span> DLT-BLK-16G-0001
+                </div>
+                <div>
+                  <span className="font-medium">EAN-13:</span> 6151100000015
+                </div>
               </div>
             </div>
           </div>
@@ -107,8 +130,8 @@ export default function Home() {
             Ready to generate your first product SKU?
           </h2>
           <p className="mb-8 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-            Start creating standardized product identifiers that work across inventory systems,
-            marketplaces, and barcode scanners.
+            Start creating standardized product identifiers that work across
+            inventory systems, marketplaces, and barcode scanners.
           </p>
           <Button
             asChild
