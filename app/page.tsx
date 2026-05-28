@@ -135,11 +135,10 @@ export default function Home() {
           </p>
           <Button
             asChild
-            href="/products"
             variant="default"
             className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-3 text-lg"
           >
-            Generate Your First SKU →
+            <Link href="/products">Generate Your First SKU →</Link>
           </Button>
         </div>
       </div>
